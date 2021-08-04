@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Admin.Models.Batch>
+
+@{
+    ViewData["Title"] = "Batch";
+}
+
+<h1>Batch</h1>
+<style>
+    body {
+        background-image: url("/images/Batch(a).jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+</style>
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+
+
+<p>
+    <a asp-action="Create3">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Domain_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Batchstartdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Batchenddate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Domain_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Batchstartdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Batchenddate)
+                </td>
+                <td>
+                    <a asp-action="Edit3" asp-route-id="@item.Faculty_Id">Edit3</a> |
+
+                    <a asp-action="Delete3" asp-route-id="@item.Faculty_Id">Delete3</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

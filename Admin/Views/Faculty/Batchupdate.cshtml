@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Admin.Models.Batchupdate>
+
+@{
+    ViewData["Title"] = "Batchupdate";
+}
+
+<h1>Batchupdate</h1>
+<style>
+    body {
+        background-image: url("/images/Batch(a).jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+<p>
+    <a asp-action="Create4">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty_Id)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Edit4" asp-route-id="@item.Faculty_Id">Edit4</a> |
+                
+                <a asp-action="Delete4" asp-route-id="@item.Faculty_Id">Delete4</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

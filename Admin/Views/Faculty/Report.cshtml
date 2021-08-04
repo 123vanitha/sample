@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Admin.Models.Report>
+
+@{
+    ViewData["Title"] = "Report";
+}
+
+<h1>Report</h1>
+<style>
+    body {
+        background-image: url("/images/academy.jpeg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+
+<p>
+    <a asp-action="Create5">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Batch_code)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Batch_code)
+            </td>
+            <td>
+                <a asp-action="Edit5" asp-route-id="@item.Faculty_Id">Edit5</a> |
+                |
+                <a asp-action="Delete5" asp-route-id="@item.Faculty_Id">Delete5</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

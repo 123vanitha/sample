@@ -1,0 +1,71 @@
+﻿@model Admin.Models.Credit
+
+@{
+    ViewData["Title"] = "Delete7";
+}
+<style>
+    body {
+        background-image: url("/images/pic3.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<h1>Delete7</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Credit</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Batch_Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Batch_Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedbackpercentage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Feedbackpercentage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Extrahours)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Extrahours)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Batchpasspercentage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Batchpasspercentage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Facultyupgrade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Facultyupgrade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificationDone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificationDone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Handsoncompletion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Handsoncompletion)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete7">
+        <input type="hidden" asp-for="Faculty_Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="credit">Back to List</a>
+    </form>
+</div>

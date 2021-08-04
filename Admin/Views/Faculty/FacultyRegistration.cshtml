@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "FacultyRegistration";
+}
+
+<h1>FacultyRegistration</h1>
+
+
+
+
+<img class="portal-logo" src="/images/Logo.jpg" >
+<h1 class="portal">Academy Portal</h1>
+
+<style>
+    body {
+        background-image: url("/images/pic2.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .portal-logo {
+        position: absolute;
+        margin-left: 10px;
+        border-style: solid;
+        width: 11%;
+        height: 23%;
+        padding: 15px;
+        font-size: 100px;
+        border-width: 1.5px;
+    }
+
+    .portal {
+        font-size: 100px;
+        font-weight: 900;
+        border-style: solid;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: -70px;
+        text-shadow: 8px 8px #ffc107;
+        padding: 10px;
+        width: 1100px;
+        border-width: 1px;
+        line-height: 130%;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 300px;
+    }
+
+    li a:hover {
+        background-color: darkmagenta;
+        color: white;
+    }
+
+    li a {
+        display: block;
+        color: #e83e8c;
+        padding: 20px 30px;
+        text-decoration: none;
+    }
+
+    #head {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: white;
+        padding: 10px 10px;
+    }
+
+    li {
+        float: left;
+    }
+</style>
+<html>
+<body>
+    
+    <div>
+        <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+        <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+
+    </div>
+
+        <div>
+            <ul>
+                <li style="font-size:15px;"><a href="Create">Faculty Personal Information</a></li>
+                <li style="font-size:15px;"><a href="create1">Faculty Skill and Certification</a></li>
+            </ul>
+        </div>
+    
+</body>
+</html>
+
+

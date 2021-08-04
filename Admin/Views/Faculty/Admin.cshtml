@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<style>
+    body {
+        background-image: url("/images/Adminbackground.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: deeppink;
+    }
+    ul {
+        list-style-type: none;
+        width: 300px;
+    }
+     li a:hover {
+        background-color: darkmagenta;
+        color: white;
+    }
+    li a {
+        display: block;
+        color:deeppink;
+        padding: 20px 30px;
+        text-decoration: none;
+    }
+
+
+</style>
+
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+
+<html>
+
+<head>
+    <title> Page Title</title>
+</head>
+
+
+
+<body>
+    <ul>
+        <li><a href="FactEdit" class="justify-content-center">Faculty Modify</a></li>
+    </ul>
+    <ul>
+        <li><a href="FactEdit" class="justify-content-center">Faculty Delete</a></li>
+    </ul>
+    <ul>
+        <li><a href="FactEdit" class="justify-content-center">Report page</a></li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿@model Admin.Models.FacultySkill
+
+@{
+    ViewData["Title"] = "Create1";
+}
+
+<style>
+    body {
+        background-image: url("/images/pic3.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<h1>Create1</h1>
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+
+
+<h4>FacultySkill</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Facultyskill" class="control-label"></label>
+                <input asp-for="Facultyskill" class="form-control" />
+                <span asp-validation-for="Facultyskill" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Facultyskill1" class="control-label"></label>
+                <input asp-for="Facultyskill1" class="form-control" />
+                <span asp-validation-for="Facultyskill1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Facultyskill2" class="control-label"></label>
+                <input asp-for="Facultyskill2" class="form-control" />
+                <span asp-validation-for="Facultyskill2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CertificateTitle" class="control-label"></label>
+                <input asp-for="CertificateTitle" class="form-control" />
+                <span asp-validation-for="CertificateTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index4">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

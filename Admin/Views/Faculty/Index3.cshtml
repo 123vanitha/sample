@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Admin.Models.Faculty>
+
+@{
+    ViewData["Title"] = "Index3";
+}
+
+<style>
+    body {
+        background-image: url("/images/Faculty(a).jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 300px;
+    }
+
+    li a:hover {
+        background-color: darkmagenta;
+        color: white;
+    }
+
+    li a {
+        display: block;
+        color: deeppink;
+        padding: 20px 30px;
+        text-decoration: none;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #c2185b;
+    }
+</style>
+
+<h1>Index3</h1>
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="color: #e91e63">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Highest_Qualification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearofExperiance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FacultyEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Street_Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faculty_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Highest_Qualification)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YearofExperiance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FacultyEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Street_Address)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Faculty_Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Faculty_Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Admin.Models.FacultySkill>
+
+@{
+    ViewData["Title"] = "Index4";
+}
+<style>
+    body {
+        background-image: url("/images/Faculty(b).jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<h1>Index4</h1>
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+<p>
+    <a asp-action="Create1">Create New</a>
+</p>
+<table class="table" style="color:orangered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Facultyskill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facultyskill1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facultyskill2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertificateTitle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facultyskill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facultyskill1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facultyskill2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CertificateTitle)
+            </td>
+            <td>
+                <a asp-action="Edit1" asp-route-id="@item.Faculty_Id">Edit1</a> |
+                |
+                <a asp-action="Delete1" asp-route-id="@item.Faculty_Id">Delete1</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

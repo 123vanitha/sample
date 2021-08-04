@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Admin.Models.Credit>
+
+@{
+    ViewData["Title"] = "credit";
+}
+
+<h1>credit</h1>
+<style>
+    body {
+        background-image: url("/images/Award(a).jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<p>
+    <a asp-action="Create7">Create New</a>
+</p>
+<table class="table" style="color: #e91e63">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Batch_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedbackpercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extrahours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Batchpasspercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facultyupgrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertificationDone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Handsoncompletion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Batch_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feedbackpercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extrahours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Batchpasspercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facultyupgrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CertificationDone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Handsoncompletion)
+            </td>
+            <td>
+                <a asp-action="Edit7" asp-route-id="@item.Faculty_Id">Edit</a> |
+                  <a asp-action="Delete7" asp-route-id="@item.Faculty_Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

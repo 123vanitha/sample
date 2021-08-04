@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Admin.Models.Award>
+
+@{
+    ViewData["Title"] = "Award";
+}
+
+<h1>Award</h1>
+<style>
+    body {
+        background-image: url("/images/Award(a).jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+   
+</style>
+<div>
+    <a style="margin-right:50px;color:red" asp-action="Academyportal">Home</a>
+    <a style="margin-left:30px;color:red " asp-action="Login">Logout</a>
+
+</div>
+
+<p>
+    <a asp-action="Create6">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Edit6" asp-route-id="@item.Faculty_Id">Edit6</a> |
+               
+                <a asp-action="Delete6" asp-route-id="@item.Faculty_Id">Delete6</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
